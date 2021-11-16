@@ -35,7 +35,6 @@ class Offer {
   url: string
 }
 export async function get_all_info_from_id(search: IDSearch, providers: [Provider]): Promise<TVOrMovie> {
-  console.time("test")
   const locales = await get_all_locales()
 
   let country_info: any = []
@@ -89,7 +88,6 @@ export async function get_all_info_from_id(search: IDSearch, providers: [Provide
     }
   })
   await Promise.all(append_offers)
-  console.timeEnd("test")
   return new TVOrMovie(search, short_description, seasons, backdrop_url, offers)
 }
 

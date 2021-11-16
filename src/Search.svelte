@@ -35,14 +35,17 @@
           Search for a movie or TV show title and see what streaming services
           offer it worldwide!
         </h3>
-        <div style="display: inline-block;">
           <form on:submit|preventDefault={onSubmit}>
-            <input
-              class="search"
-              type="text"
-              bind:value={query}
-              placeholder="Title"
-            />
+            <div>
+              <input
+                class="search"
+                type="text"
+                bind:value={query}
+                placeholder="🔎 Title"
+                style="width: 30vw;"
+              />
+              <input type="submit" class="search" value="Search" />
+            </div>
             <select class="search" bind:value={selected_locale}>
               {#each locales as locale}
                 <option value={JSON.stringify(locale)}
@@ -50,10 +53,11 @@
                 >
               {/each}
             </select>
-            <input type="submit" class="search" />
           </form>
-          <p>Optionally select a country for the initial search, allows searching in your country's native language.</p>
-        </div>
+          <p>
+            Optionally select a country for the initial search, allows searching
+            in your country's native language.
+          </p>
       </div>
     {/await}
   </div>
@@ -63,19 +67,19 @@
   p {
     font-size: 0.8rem;
     font-weight: 300;
-    color:white;
+    color: white;
   }
   .top {
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 50%;
     padding: 2rem;
     border-radius: 2rem;
-    margin-top: calc(100vh/6);
+    margin-top: calc(100vh / 6);
   }
   .background {
     background-image: url("https://colaski.github.io/global-streaming-search/images/movie-poster-collection.webp");
@@ -97,14 +101,15 @@
 
   h1 {
     color: #ff7b00;
-    text-transform: uppercase;
     font-size: 2em;
     font-weight: 300;
+    font-family: cursive;
   }
 
   .search {
     background-color: transparent;
     color: white;
+    border-radius: 0.3rem;
   }
 
   input::placeholder {
