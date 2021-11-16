@@ -5,7 +5,7 @@ A website for searching every streaming service globally.
 
 Currently only works locally because of CORS.
 
-<<<<<<< Updated upstream
+
 [https://colaski.github.io/global-streaming-search/](https://colaski.github.io/global-streaming-search/)
 =======
 Therefore:
@@ -17,4 +17,3 @@ npm install
 npm run start
 ```
 open `localhost:8000` in your browser.
->>>>>>> Stashed changes
