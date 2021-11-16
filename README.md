@@ -3,9 +3,7 @@
 A website for searching every streaming service globally.
 [https://colaski.github.io/global-streaming-search/](https://colaski.github.io/global-streaming-search/)
 
-Currently only works locally because of CORS.
-
-Therefore:
+Run locally:
 
 ```bash
 git clone https://github.com/Colaski/global-streaming-search.git
