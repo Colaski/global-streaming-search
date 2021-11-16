@@ -1,4 +1,4 @@
-<div style="margin:8rem;">
+<div style="margin-top:8rem;">
   <span>
     <h1>Loading...</h1>
   </span>
@@ -17,11 +17,11 @@
     justify-content: center;
   }
   .loader {
-    border: 16px solid grey;
-    border-top: 16px solid rgb(255, 230, 0);
+    border: 1rem solid grey;
+    border-top: 1rem solid rgb(255, 230, 0);
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 7rem;
+    height: 7rem;
     animation: spin 2s linear infinite;
   }
 

@@ -69,6 +69,7 @@
     width: 60%;
     padding: 2rem;
     border-radius: 2rem;
+    margin-top: 5rem;
   }
   .background {
     background-image: url("../../images/movie-poster-collection.webp");
