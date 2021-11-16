@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
+    "dev": "rollup -c -w --port 8000",
+    "start": "sirv public --no-clear --port 8000",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
