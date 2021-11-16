@@ -3,6 +3,8 @@
 A website for searching every streaming service globally.
 [https://colaski.github.io/global-streaming-search/](https://colaski.github.io/global-streaming-search/)
 
+Powered by the [JustWatch API](https://justwatch.com) using [JustWatch API TypeScript](https://github.com/Colaski/JustWatchAPITypeScript).
+
 Run locally:
 
 ```bash
