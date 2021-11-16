@@ -1,6 +1,7 @@
 <script lang="ts">
   import Loading from "./Loading.svelte"
   import App from "./App.svelte";
+  import Header from "./Header.svelte"
 
   import type { Locale, IDSearch } from "./backend/justwatchapi";
   import { search } from "./backend/search";
@@ -25,6 +26,7 @@
 {#if selected}
   <App page="Selection" {selection} />
 {:else}
+  <Header/>
   <h2 style="color: white; text-align: center;">
     Results for <span style="color: red;">{query}</span>
   </h2>

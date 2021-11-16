@@ -1,4 +1,4 @@
-<div style="margin-top:8rem;">
+<div style="padding-top:8rem; height: 100vh;">
   <span>
     <h1>Loading...</h1>
   </span>

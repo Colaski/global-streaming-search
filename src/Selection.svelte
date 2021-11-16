@@ -2,6 +2,7 @@
   import Loading from "./Loading.svelte"
   import type { IDSearch } from "./backend/justwatchapi";
   import { get_all_info_from_id, Provider, TVOrMovie } from "./backend/search";
+  import Header from "./Header.svelte"
 
   export let providers: [Provider];
   export let selection;
@@ -13,6 +14,7 @@
 {#await title}
   <Loading/>
 {:then titles}
+  <Header/>
   <div class="selection" style="--backdrop-url: url({titles.backdrop_url});">
     <div style="background-color: transparent; height: 15rem;" />
     <div class="box">
@@ -63,6 +65,7 @@
   }
   .text {
     padding-left: 1rem;
+    padding-right: 1rem;
   }
   img {
     width: 35%;
@@ -77,7 +80,9 @@
     margin-top: -1.5rem;
     background-image: var(--backdrop-url);
     background-size: cover;
-    height: 20rem;
+    height: 30rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
   .box {
     display: block;

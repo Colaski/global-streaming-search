@@ -52,6 +52,7 @@
             </select>
             <input type="submit" class="search" />
           </form>
+          <p>Optionally select a country for the initial search, allows searching in your country's native language.</p>
         </div>
       </div>
     {/await}
@@ -59,6 +60,11 @@
 {/if}
 
 <style>
+  p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color:white;
+  }
   .top {
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
@@ -69,10 +75,10 @@
     width: 60%;
     padding: 2rem;
     border-radius: 2rem;
-    margin-top: 5rem;
+    margin-top: calc(100vh/6);
   }
   .background {
-    background-image: url("../../images/movie-poster-collection.webp");
+    background-image: url("https://colaski.github.io/global-streaming-search/images/movie-poster-collection.webp");
     filter: blur(0.3rem);
     height: 100vh;
     margin-top: -3rem;
@@ -86,12 +92,13 @@
   h3 {
     font-weight: 300;
     color: white;
+    font-size: 1rem;
   }
 
   h1 {
     color: #ff7b00;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 300;
   }
 
