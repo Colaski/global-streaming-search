@@ -1,6 +1,6 @@
 // Search for an Item (either a show or movie title) in a locale/country (ex. "en_US" for USA)
 export async function search_for_item(query: string, country: string): Promise<any> {
-    const url = `https://warm-coast-72718.herokuapp.com/https://apis.justwatch.com/content/titles/${country}/popular`
+    const url = `https://apis.justwatch.com/content/titles/${country}/popular`
 
     const body = {
         "query": query,
@@ -19,7 +19,7 @@ export async function search_for_item(query: string, country: string): Promise<a
 
 // Returns raw JSON information on every locale supported by JustWatch
 async function get_locales(): Promise<any> {
-    const url = "https://warm-coast-72718.herokuapp.com/https://apis.justwatch.com/content/locales/state"
+    const url = "https://apis.justwatch.com/content/locales/state"
     const response = await fetch(url, {
       headers: {"X-Requested-With": "fetch"}
     })
@@ -53,7 +53,7 @@ export async function get_all_locales(): Promise<[Locale]> {
 
 // Returns JSON data on every provider JustWatch has data on for a given locale/country
 async function get_providers(country: string): Promise<any> {
-    const url = `https://warm-coast-72718.herokuapp.com/https://apis.justwatch.com/content/providers/locale/${country}`
+    const url = `https://apis.justwatch.com/content/providers/locale/${country}`
     const response = await fetch(url, {
       headers: {"X-Requested-With": "fetch"}
     })
@@ -82,7 +82,7 @@ Returns JustWatch's data for a given show or movie for a given locale.
 content_type is either "show" or "movie"
 */
 export async function get_title_from_id(title_id: string, country: string, content_type: string): Promise<any> {
-    const url = `https://warm-coast-72718.herokuapp.com/https://apis.justwatch.com/content/titles/${content_type}/${title_id}/locale/${country}`
+    const url = `https://apis.justwatch.com/content/titles/${content_type}/${title_id}/locale/${country}`
     const response = await fetch(url, {
       headers: {"X-Requested-With": "fetch"}
     })
