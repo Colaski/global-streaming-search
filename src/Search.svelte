@@ -35,6 +35,10 @@
           Search for a movie or TV show title and see what streaming services
           offer it worldwide!
         </h3>
+        <p>
+          Optionally select a country for the initial search, allows searching
+          in your country's native language.
+        </p>
           <form on:submit|preventDefault={onSubmit}>
             <div>
               <input
@@ -54,10 +58,6 @@
               {/each}
             </select>
           </form>
-          <p>
-            Optionally select a country for the initial search, allows searching
-            in your country's native language.
-          </p>
       </div>
     {/await}
   </div>
