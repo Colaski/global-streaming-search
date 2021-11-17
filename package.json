@@ -25,7 +25,6 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0",
-    "svelte-meta-tags": "^2.1.0"
+    "sirv-cli": "^1.0.0"
   }
 }
