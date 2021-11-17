@@ -6,12 +6,9 @@
 <svelte:head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <html lang="en" />
+  <meta name="title" content="Global Streaming Search"/>
+  <meta name="description" content="Search streaming services globally, all in one place!"/>
 </svelte:head>
-
-<MetaTags
-  Title="Global Streaming Search"
-  description="Search streaming services globally, all in one place!"
-/>
 
 <main>
   <a href="https://github.com/Colaski/global-streaming-search"
