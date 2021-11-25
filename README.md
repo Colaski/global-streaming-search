@@ -1,6 +1,6 @@
 # Global Streaming Search
 
-A website for searching every streaming service globally.
+The global streaming search engine.
 [https://colaski.github.io/global-streaming-search/](https://colaski.github.io/global-streaming-search/)
 
 Powered by the [JustWatch API](https://justwatch.com) using [JustWatch API TypeScript](https://github.com/Colaski/JustWatchAPITypeScript).
