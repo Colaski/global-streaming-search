@@ -48,8 +48,7 @@
               <input type="submit" class="search" value="Search" />
             </div>
             <p>
-              Optionally select a country for the initial search, allows searching
-              in your country's native language.
+              Optionally, select a country for the initial search. Search in your country's native language, can also help with titles only found in your country.
             </p>
             <select class="search" bind:value={selected_locale}>
               {#each locales as locale}
