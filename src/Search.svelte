@@ -103,7 +103,6 @@
     color: #ff7b00;
     font-size: 2em;
     font-weight: 300;
-    font-family: cursive;
   }
 
   .search {

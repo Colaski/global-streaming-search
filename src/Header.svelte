@@ -5,7 +5,6 @@
 <style>
   h1 {
     color: #ff7b00;
-    font-family: cursive;
     font-size: 1em;
     font-weight: 300;
     padding: 1.5rem;
