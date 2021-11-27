@@ -1,6 +1,5 @@
 <script>
   import App from "./App.svelte";
-  import { MetaTags } from "svelte-meta-tags";
 </script>
 
 <main>
