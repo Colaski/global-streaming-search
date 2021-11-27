@@ -43,7 +43,7 @@
                 type="text"
                 bind:value={query}
                 placeholder="🔎 Title"
-                style="width: 30vw;"
+                style="width: 40vw;"
               />
               <input type="submit" class="search" value="Search" />
             </div>
@@ -75,7 +75,7 @@
   }
   p {
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 500;
     color: white;
   }
   .top {
@@ -102,7 +102,7 @@
   }
 
   h3 {
-    font-weight: 300;
+    font-weight: 500;
     color: white;
     font-size: 1rem;
   }
