@@ -45,14 +45,6 @@
       </div>
     </div>
   </div>
-{:catch error}
-  <Header/>
-  <div style="text-align: center; color: white; margin: 1rem;">
-    <h1 >The website is being rate limited 😞, please try again later</h1>
-    <p></p>
-    <h3>If you happen to know what Node.js is you can run this website locally and avoid rate limits.</h3>
-    <h3>Click the Github logo in the corner for more information.</h3>
-  </div>
 {/await}
 
 <style>
