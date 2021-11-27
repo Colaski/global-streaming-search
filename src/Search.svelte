@@ -30,15 +30,12 @@
     {:then locales}
       <div class="background" />
       <div class="top">
-        <h1>Global Streaming Search</h1>
+        <div class="welcome">
+          <h1>Global Streaming Search</h1>
         <h3>
           Search for a movie or TV show title and see what streaming services
           offer it worldwide!
         </h3>
-        <p>
-          Optionally select a country for the initial search, allows searching
-          in your country's native language.
-        </p>
           <form on:submit|preventDefault={onSubmit}>
             <div>
               <input
@@ -50,6 +47,10 @@
               />
               <input type="submit" class="search" value="Search" />
             </div>
+            <p>
+              Optionally select a country for the initial search, allows searching
+              in your country's native language.
+            </p>
             <select class="search" bind:value={selected_locale}>
               {#each locales as locale}
                 <option value={JSON.stringify(locale)}
@@ -58,12 +59,21 @@
               {/each}
             </select>
           </form>
+        </div>
       </div>
     {/await}
   </div>
 {/if}
 
 <style>
+  option {
+    background-color: black;
+  }
+  .welcome {
+    padding-top: calc(100vh / 6);
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
   p {
     font-size: 0.8rem;
     font-weight: 300;
@@ -76,14 +86,13 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    padding: 2rem;
-    border-radius: 2rem;
+    width: 100vw;
+    height: 100vh;
     margin-top: calc(100vh / 6);
   }
   .background {
     background-image: url("https://colaski.github.io/global-streaming-search/images/movie-poster-collection.webp");
-    filter: blur(0.3rem);
+    filter: blur(0.5rem);
     height: 100vh;
     margin-top: -3rem;
   }
