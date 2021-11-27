@@ -1,6 +1,21 @@
 // Search for an Item (either a show or movie title) in a locale/country (ex. "en_US" for USA)
+import { all_locales, all_providers } from "./data"
+
+function proxy(): string {
+  let proxies = [
+    "https://dry-waters-53113.herokuapp.com/", 
+    "https://fathomless-tundra-40172.herokuapp.com/", 
+    "https://hidden-beach-05883.herokuapp.com/", 
+    "https://morning-hamlet-08523.herokuapp.com/", 
+    "https://desolate-falls-87276.herokuapp.com/"
+  ]
+  let randomIndex = Math.floor(Math.random() * proxies.length)
+  return "https://api.allorigins.win/raw?url="
+}
+
 export async function search_for_item(query: string, country: string): Promise<any> {
-    const url = `https://apis.justwatch.com/content/titles/${country}/popular`
+  console.log(proxy())
+    const url = `${proxy()}https://apis.justwatch.com/content/titles/${country}/popular`
 
     const body = {
         "query": query,
@@ -19,12 +34,7 @@ export async function search_for_item(query: string, country: string): Promise<a
 
 // Returns raw JSON information on every locale supported by JustWatch
 async function get_locales(): Promise<any> {
-    const url = "https://apis.justwatch.com/content/locales/state"
-    const response = await fetch(url, {
-      headers: {"X-Requested-With": "fetch"}
-    })
-    if (response.ok == false) throw new Error("Http Error: " + response.status)
-    return await response.json()
+    return all_locales
 }
 
 export class Locale {
@@ -53,7 +63,7 @@ export async function get_all_locales(): Promise<[Locale]> {
 
 // Returns JSON data on every provider JustWatch has data on for a given locale/country
 async function get_providers(country: string): Promise<any> {
-    const url = `https://apis.justwatch.com/content/providers/locale/${country}`
+    const url = `${proxy()}https://apis.justwatch.com/content/providers/locale/${country}`
     const response = await fetch(url, {
       headers: {"X-Requested-With": "fetch"}
     })
@@ -63,18 +73,7 @@ async function get_providers(country: string): Promise<any> {
 
 // Returns the JSON data on every single provider JustWath has data on for every country
 export async function get_all_providers(): Promise<any> {
-    const locale_list = await get_all_locales()
-    var providers_array: any = []
-    var promise = locale_list.map(async locale => {
-        var r = await get_providers(locale.full_locale)
-        var provider = {
-            country: locale.country,
-            providers: r
-        }
-        providers_array.push(provider)
-    })
-    await Promise.all(promise)
-    return providers_array
+    return all_providers
 }
 
 /*
@@ -82,7 +81,7 @@ Returns JustWatch's data for a given show or movie for a given locale.
 content_type is either "show" or "movie"
 */
 export async function get_title_from_id(title_id: string, country: string, content_type: string): Promise<any> {
-    const url = `https://apis.justwatch.com/content/titles/${content_type}/${title_id}/locale/${country}`
+    const url = `${proxy()}https://apis.justwatch.com/content/titles/${content_type}/${title_id}/locale/${country}`
     const response = await fetch(url, {
       headers: {"X-Requested-With": "fetch"}
     })
