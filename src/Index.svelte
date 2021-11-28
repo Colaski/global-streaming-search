@@ -1,6 +1,5 @@
 <script>
   import App from "./App.svelte";
-  import { MetaTags } from "svelte-meta-tags";
 </script>
 
 <main>
@@ -25,11 +24,10 @@
   }
   :global(body) {
     background-image: linear-gradient(135deg, rgb(16, 24, 44), rgb(44, 16, 16));
-    height: 100%;
+    height: max-content;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-left: 0;
-    margin-right: 0;
+    z-index: 0;
   }
 </style>

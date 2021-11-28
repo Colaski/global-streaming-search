@@ -16,7 +16,7 @@
 {:then titles}
   <Header/>
   <div class="selection" style="--backdrop-url: url({titles.backdrop_url});">
-    <div style="background-color: transparent; height: 15rem;" />
+    <div style="height: 15rem;" />
     <div class="box">
       <div style="display: flex; align-items: left">
         <img
@@ -37,21 +37,12 @@
                   <label for="{offer.short_name}">{offer.clear_name}</label>
                   </span>
                 </div>
-                <!--Continue-->
               {/each}
             </div>
           {/each}
         </div>
       </div>
     </div>
-  </div>
-{:catch error}
-  <Header/>
-  <div style="text-align: center; color: white; margin: 1rem;">
-    <h1 >The website is being rate limited 😞, please try again later</h1>
-    <p></p>
-    <h3>If you happen to know what Node.js is you can run this website locally and avoid rate limits.</h3>
-    <h3>Click the Github logo in the corner for more information.</h3>
   </div>
 {/await}
 
@@ -91,6 +82,7 @@
     height: 30rem;
     margin-left: -1rem;
     margin-right: -1rem;
+    z-index: 100;
   }
   .box {
     display: block;
@@ -98,7 +90,8 @@
     margin-right: 10%;
     background-color: rgb(44, 44, 44);
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: white;
+    z-index: 200;
   }
 </style>
