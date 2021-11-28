@@ -16,7 +16,7 @@
 {:then titles}
   <Header/>
   <div class="selection" style="--backdrop-url: url({titles.backdrop_url});">
-    <div style="background-color: transparent; height: 15rem;" />
+    <div style="height: 15rem;" />
     <div class="box">
       <div style="display: flex; align-items: left">
         <img
@@ -37,7 +37,6 @@
                   <label for="{offer.short_name}">{offer.clear_name}</label>
                   </span>
                 </div>
-                <!--Continue-->
               {/each}
             </div>
           {/each}
@@ -83,6 +82,7 @@
     height: 30rem;
     margin-left: -1rem;
     margin-right: -1rem;
+    z-index: 100;
   }
   .box {
     display: block;
@@ -90,7 +90,8 @@
     margin-right: 10%;
     background-color: rgb(44, 44, 44);
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: white;
+    z-index: 200;
   }
 </style>

@@ -43,7 +43,7 @@
                 type="text"
                 bind:value={query}
                 placeholder="🔎 Title"
-                style="width: 40vw;"
+                style="width: 40vw; height: 2.5rem;"
               />
               <input type="submit" class="search" value="Search" />
             </div>
