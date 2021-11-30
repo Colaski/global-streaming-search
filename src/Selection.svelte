@@ -1,7 +1,7 @@
 <script lang="ts">
   import Loading from "./Loading.svelte"
   import type { IDSearch } from "./backend/justwatchapi";
-  import { get_all_info_from_id, Provider, TVOrMovie } from "./backend/search";
+  import { get_all_info_from_id, Provider } from "./backend/search";
   import Header from "./Header.svelte"
 
   export let providers: [Provider];
@@ -9,6 +9,19 @@
   selection = JSON.parse(selection) as IDSearch;
 
   let title = get_all_info_from_id(selection, providers);
+
+  function compare(a, b) {
+  const countryA = a.country;
+  const countryB = b.country;
+
+  let comparison = 0;
+  if (countryA > countryB) {
+    comparison = 1;
+  } else if (countryA < countryB) {
+    comparison = -1;
+  }
+  return comparison;
+}
 </script>
 
 {#await title}
@@ -27,7 +40,7 @@
           <h1>{titles["title"]}</h1>
           <h3>{titles["release_year"]}</h3>
           <p>{titles["short_description"]}</p>
-          {#each titles.offers as country}
+          {#each titles.offers.sort(compare) as country}
             <div class="offer">
               <h4>{country["country"]}</h4>
               {#each country.offers as offer}
