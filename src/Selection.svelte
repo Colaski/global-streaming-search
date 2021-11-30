@@ -22,6 +22,10 @@
   }
   return comparison;
 }
+
+  function unique(a) {
+    return [...new Map(a.map((item: { [x: string]: any; }) => [item["id"], item])).values()]
+  }
 </script>
 
 {#await title}
@@ -43,7 +47,7 @@
           {#each titles.offers.sort(compare) as country}
             <div class="offer">
               <h4>{country["country"]}</h4>
-              {#each country.offers as offer}
+              {#each unique(country.offers) as offer}
                 <div style="display: inline-block;">
                   <span style="text-align: center; display: inline-block;">
                     <a href="{offer["url"]}"><img src="{offer["icon_uri"]}" alt="Icon for {offer.clear_name}" id="{offer.short_name}"></a>
