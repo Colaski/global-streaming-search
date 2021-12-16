@@ -3,12 +3,14 @@ import { all_locales, all_providers } from "./data"
 
 function proxy(): string {
   let proxies = [
-    // Colaski
+    // Colaski OG
     "https://quiet-inlet-02682.herokuapp.com/", 
     "https://arcane-woodland-11290.herokuapp.com/", 
     "https://infinite-reef-34828.herokuapp.com/", 
     "https://shielded-island-83939.herokuapp.com/",
     "https://blooming-savannah-63408.herokuapp.com/",
+
+    // Colaski Pro
 
     // John Johnson
     "https://pacific-refuge-02180.herokuapp.com/",
@@ -18,7 +20,13 @@ function proxy(): string {
     "https://still-ocean-32580.herokuapp.com/",
 
     // Jack Daniels
-    
+
+    // Jim Bean
+    "https://lit-fortress-39884.herokuapp.com/",
+    "https://serene-depths-23002.herokuapp.com/",
+    "https://whispering-waters-07258.herokuapp.com/",
+    "https://peaceful-castle-44825.herokuapp.com/",
+    "https://murmuring-thicket-31058.herokuapp.com/",
   ]
   let randomIndex = Math.floor(Math.random() * proxies.length)
   return proxies[randomIndex]
