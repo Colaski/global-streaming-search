@@ -14,13 +14,6 @@ function proxy(): string {
     "https://afternoon-wildwood-06232.herokuapp.com/",
     "https://stormy-anchorage-46941.herokuapp.com/",
     "https://fathomless-garden-91533.herokuapp.com/",
-
-    // Jack Daniels
-    "https://still-ridge-33368.herokuapp.com/",
-    "https://arcane-crag-82736.herokuapp.com/",
-    "https://safe-caverns-14215.herokuapp.com/",
-    "https://tranquil-dawn-76872.herokuapp.com/",
-    "https://stark-lowlands-59328.herokuapp.com/",
   ]
   let randomIndex = Math.floor(Math.random() * proxies.length)
   return proxies[randomIndex]
