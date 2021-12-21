@@ -13,11 +13,7 @@ function proxy(): string {
     // Colaski Pro
 
     // John Johnson
-    "https://pacific-refuge-02180.herokuapp.com/",
-    "https://serene-everglades-75055.herokuapp.com/",
-    "https://hidden-tundra-52798.herokuapp.com/",
-    "https://intense-anchorage-79654.herokuapp.com/",
-    "https://still-ocean-32580.herokuapp.com/",
+    
 
     // Jack Daniels
 
