@@ -4,16 +4,11 @@ import { all_locales, all_providers } from "./data"
 function proxy(): string {
   let proxies = [
     // Colaski OG
-    "https://quiet-inlet-02682.herokuapp.com/", 
-    "https://arcane-woodland-11290.herokuapp.com/", 
-    "https://infinite-reef-34828.herokuapp.com/", 
-    "https://shielded-island-83939.herokuapp.com/",
-    "https://blooming-savannah-63408.herokuapp.com/",
+    
 
     // Colaski Pro
 
     // John Johnson
-    
 
     // Jack Daniels
 
