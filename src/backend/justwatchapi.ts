@@ -4,13 +4,32 @@ import { all_locales, all_providers } from "./data"
 function proxy(): string {
   let proxies = [
     // Colaski OG
-    
+    "https://quiet-inlet-02682.herokuapp.com/", 
+    "https://arcane-woodland-11290.herokuapp.com/", 
+    "https://infinite-reef-34828.herokuapp.com/", 
+    "https://shielded-island-83939.herokuapp.com/",
+    "https://blooming-savannah-63408.herokuapp.com/",
 
     // Colaski Pro
+    "https://desolate-bastion-94108.herokuapp.com/",
+    "https://secure-cliffs-97501.herokuapp.com/",
+    "https://fierce-oasis-99209.herokuapp.com/",
+    "https://polar-waters-99939.herokuapp.com/",
+    "https://polar-woodland-98004.herokuapp.com/",
 
     // John Johnson
+    "https://hidden-tundra-52798.herokuapp.com/",
+    "https://intense-anchorage-79654.herokuapp.com/",
+    "https://pacific-refuge-02180.herokuapp.com/",
+    "https://serene-everglades-75055.herokuapp.com/",
+    "https://still-ocean-32580.herokuapp.com/",
 
     // Jack Daniels
+    "https://enigmatic-stream-81793.herokuapp.com/",
+    "https://safe-beach-77258.herokuapp.com/",
+    "https://mysterious-cove-12751.herokuapp.com/",
+    "https://radiant-plains-59810.herokuapp.com/",
+    "https://guarded-reef-53294.herokuapp.com/",
 
     // Jim Bean
     "https://lit-fortress-39884.herokuapp.com/",
@@ -92,7 +111,7 @@ async function get_providers(country: string): Promise<any> {
     return response.json()
 }
 
-// Returns the JSON data on every single provider JustWath has data on for every country
+// Returns the JSON data on every single provider JustWatch has data on for every country
 export async function get_all_providers(): Promise<any> {
     return all_providers
 }
