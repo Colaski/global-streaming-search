@@ -3,33 +3,33 @@ import { all_locales, all_providers } from "./data"
 
 function proxy(): string {
   let proxies = [
-    // // Colaski OG
-    // "https://quiet-inlet-02682.herokuapp.com/", 
-    // "https://arcane-woodland-11290.herokuapp.com/", 
-    // "https://infinite-reef-34828.herokuapp.com/", 
-    // "https://shielded-island-83939.herokuapp.com/",
-    // "https://blooming-savannah-63408.herokuapp.com/",
+    // Colaski OG
+    "https://quiet-inlet-02682.herokuapp.com/", 
+    "https://arcane-woodland-11290.herokuapp.com/", 
+    "https://infinite-reef-34828.herokuapp.com/", 
+    "https://shielded-island-83939.herokuapp.com/",
+    "https://blooming-savannah-63408.herokuapp.com/",
 
-    // // Colaski Pro
-    // "https://desolate-bastion-94108.herokuapp.com/",
-    // "https://secure-cliffs-97501.herokuapp.com/",
-    // "https://fierce-oasis-99209.herokuapp.com/",
-    // "https://polar-waters-99939.herokuapp.com/",
-    // "https://polar-woodland-98004.herokuapp.com/",
+    // Colaski Pro
+    "https://desolate-bastion-94108.herokuapp.com/",
+    "https://secure-cliffs-97501.herokuapp.com/",
+    "https://fierce-oasis-99209.herokuapp.com/",
+    "https://polar-waters-99939.herokuapp.com/",
+    "https://polar-woodland-98004.herokuapp.com/",
 
-    // // John Johnson
-    // "https://hidden-tundra-52798.herokuapp.com/",
-    // "https://intense-anchorage-79654.herokuapp.com/",
-    // "https://pacific-refuge-02180.herokuapp.com/",
-    // "https://serene-everglades-75055.herokuapp.com/",
-    // "https://still-ocean-32580.herokuapp.com/",
+    // John Johnson
+    "https://hidden-tundra-52798.herokuapp.com/",
+    "https://intense-anchorage-79654.herokuapp.com/",
+    "https://pacific-refuge-02180.herokuapp.com/",
+    "https://serene-everglades-75055.herokuapp.com/",
+    "https://still-ocean-32580.herokuapp.com/",
 
-    // // Jack Daniels
-    // "https://enigmatic-stream-81793.herokuapp.com/",
-    // "https://safe-beach-77258.herokuapp.com/",
-    // "https://mysterious-cove-12751.herokuapp.com/",
-    // "https://radiant-plains-59810.herokuapp.com/",
-    // "https://guarded-reef-53294.herokuapp.com/",
+    // Jack Daniels
+    "https://enigmatic-stream-81793.herokuapp.com/",
+    "https://safe-beach-77258.herokuapp.com/",
+    "https://mysterious-cove-12751.herokuapp.com/",
+    "https://radiant-plains-59810.herokuapp.com/",
+    "https://guarded-reef-53294.herokuapp.com/",
 
     // // Jim Bean
     // "https://lit-fortress-39884.herokuapp.com/",
@@ -45,19 +45,19 @@ function proxy(): string {
     // "https://salty-everglades-46529.herokuapp.com/",
     // "https://enigmatic-springs-90651.herokuapp.com/",
 
-    // Evan Williams
-    "https://whispering-earth-79732.herokuapp.com/",
-    "https://whispering-inlet-34670.herokuapp.com/",
-    "https://gentle-wildwood-67571.herokuapp.com/",
-    "https://powerful-crag-23558.herokuapp.com/",
-    "https://obscure-ocean-48137.herokuapp.com/",
+    // // Evan Williams
+    // "https://whispering-earth-79732.herokuapp.com/",
+    // "https://whispering-inlet-34670.herokuapp.com/",
+    // "https://gentle-wildwood-67571.herokuapp.com/",
+    // "https://powerful-crag-23558.herokuapp.com/",
+    // "https://obscure-ocean-48137.herokuapp.com/",
 
-    // JOHNNIE WALKER
-    "https://blooming-coast-35749.herokuapp.com/",
-    "https://floating-citadel-26217.herokuapp.com/",
-    "https://warm-depths-36138.herokuapp.com/",
-    "https://still-gorge-22931.herokuapp.com/",
-    "https://desolate-sierra-66017.herokuapp.com/",
+    // // JOHNNIE WALKER
+    // "https://blooming-coast-35749.herokuapp.com/",
+    // "https://floating-citadel-26217.herokuapp.com/",
+    // "https://warm-depths-36138.herokuapp.com/",
+    // "https://still-gorge-22931.herokuapp.com/",
+    // "https://desolate-sierra-66017.herokuapp.com/",
   ]
   let randomIndex = Math.floor(Math.random() * proxies.length)
   return proxies[randomIndex]
