@@ -13,6 +13,7 @@ Execute these commands in your terminal:
 git clone https://github.com/Colaski/global-streaming-search.git
 cd global-streaming-search
 npm install
+npm run build
 npm run start
 ```
 open `localhost:8000` in your browser.
