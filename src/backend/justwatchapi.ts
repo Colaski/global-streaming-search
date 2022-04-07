@@ -6,7 +6,8 @@ let date = d.getDate()
 
 function proxy(): string {
   var proxies = []
-  if (date <= 8) {
+
+  if (date <= 4) {
     proxies = [
       // Colaski OG
       "https://quiet-inlet-02682.herokuapp.com/", 
@@ -14,7 +15,10 @@ function proxy(): string {
       "https://infinite-reef-34828.herokuapp.com/", 
       "https://shielded-island-83939.herokuapp.com/",
       "https://blooming-savannah-63408.herokuapp.com/",
-
+    ]
+  }
+  else if (date < 7) {
+    proxies = [
       // Colaski Pro
       "https://desolate-bastion-94108.herokuapp.com/",
       "https://secure-cliffs-97501.herokuapp.com/",
@@ -22,7 +26,7 @@ function proxy(): string {
       "https://polar-waters-99939.herokuapp.com/",
       "https://polar-woodland-98004.herokuapp.com/",
     ]
-  } else if (date <= 16) {
+  } else if (date <= 12) {
     proxies = [
       // John Johnson
       "https://hidden-tundra-52798.herokuapp.com/",
@@ -30,7 +34,9 @@ function proxy(): string {
       "https://pacific-refuge-02180.herokuapp.com/",
       "https://serene-everglades-75055.herokuapp.com/",
       "https://still-ocean-32580.herokuapp.com/",
-
+    ]
+  } else if (date <= 16) {
+    proxies = [
       // Jack Daniels
       "https://enigmatic-stream-81793.herokuapp.com/",
       "https://safe-beach-77258.herokuapp.com/",
@@ -38,7 +44,7 @@ function proxy(): string {
       "https://radiant-plains-59810.herokuapp.com/",
       "https://guarded-reef-53294.herokuapp.com/",
     ]
-  } else if (date <= 24) {
+  } if (date <= 20) {
     proxies = [
       // Jim Bean
       "https://lit-fortress-39884.herokuapp.com/",
@@ -46,7 +52,9 @@ function proxy(): string {
       "https://whispering-waters-07258.herokuapp.com/",
       "https://peaceful-castle-44825.herokuapp.com/",
       "https://murmuring-thicket-31058.herokuapp.com/",
-
+    ]
+  } else if (date <= 24) {
+    proxies = [
       // James Jameson
       "https://pure-cliffs-22620.herokuapp.com/",
       "https://pacific-brushlands-02877.herokuapp.com/",
