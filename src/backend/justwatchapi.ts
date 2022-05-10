@@ -17,7 +17,7 @@ function proxy(): string {
       "https://blooming-savannah-63408.herokuapp.com/",
     ]
   }
-  else if (date < 7) {
+  else if (date <= 8) {
     proxies = [
       // Colaski Pro
       "https://desolate-bastion-94108.herokuapp.com/",
@@ -46,12 +46,12 @@ function proxy(): string {
     ]
   } if (date <= 20) {
     proxies = [
-      // Jim Bean
-      "https://lit-fortress-39884.herokuapp.com/",
-      "https://serene-depths-23002.herokuapp.com/",
-      "https://whispering-waters-07258.herokuapp.com/",
-      "https://peaceful-castle-44825.herokuapp.com/",
-      "https://murmuring-thicket-31058.herokuapp.com/",
+      // Glen Fohdry
+      "https://guarded-wave-43380.herokuapp.com/",
+      "https://fathomless-headland-13472.herokuapp.com/",
+      "https://protected-escarpment-40664.herokuapp.com/",
+      "https://whispering-oasis-41062.herokuapp.com/",
+      "https://secure-depths-48114.herokuapp.com/",
     ]
   } else if (date <= 24) {
     proxies = [
@@ -79,15 +79,6 @@ function proxy(): string {
       "https://desolate-sierra-66017.herokuapp.com/",
     ]
   }
-
-  // let proxies = [
-  //   // Glen Fohdry
-  //   "https://guarded-wave-43380.herokuapp.com/",
-  //   "https://fathomless-headland-13472.herokuapp.com/",
-  //   "https://protected-escarpment-40664.herokuapp.com/",
-  //   "https://whispering-oasis-41062.herokuapp.com/",
-  //   "https://secure-depths-48114.herokuapp.com/",
-  // ]
 
   let randomIndex = Math.floor(Math.random() * proxies.length)
   return proxies[randomIndex]
