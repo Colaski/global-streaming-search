@@ -17,34 +17,29 @@ function proxy(): string {
       "https://blooming-savannah-63408.herokuapp.com/",
     ]
   }
-  else if (date <= 8) {
+  else if (date <= 8 && date > 4) {
     proxies = [
-      // Colaski Pro
-      "https://desolate-bastion-94108.herokuapp.com/",
-      "https://secure-cliffs-97501.herokuapp.com/",
-      "https://fierce-oasis-99209.herokuapp.com/",
-      "https://polar-waters-99939.herokuapp.com/",
-      "https://polar-woodland-98004.herokuapp.com/",
+      // Elijah Craig
+      "https://mighty-meadow-71712.herokuapp.com/",
+      "https://morning-dusk-98003.herokuapp.com/",
+      "https://infinite-gorge-75225.herokuapp.com/",
+      "https://lit-waters-97162.herokuapp.com/",
+      "https://hidden-caverns-23398.herokuapp.com/"
     ]
-  } else if (date <= 12) {
+  } else if (date <= 12 && date > 8) {
     proxies = [
-      // John Johnson
-      "https://hidden-tundra-52798.herokuapp.com/",
-      "https://intense-anchorage-79654.herokuapp.com/",
-      "https://pacific-refuge-02180.herokuapp.com/",
-      "https://serene-everglades-75055.herokuapp.com/",
-      "https://still-ocean-32580.herokuapp.com/",
+      // JOHNNIE WALKER
+      "https://blooming-coast-35749.herokuapp.com/",
+      "https://floating-citadel-26217.herokuapp.com/",
+      "https://warm-depths-36138.herokuapp.com/",
+      "https://still-gorge-22931.herokuapp.com/",
+      "https://desolate-sierra-66017.herokuapp.com/",
     ]
-  } else if (date <= 16) {
+  } else if (date <= 16 && date > 12) {
     proxies = [
-      // Jack Daniels
-      "https://enigmatic-stream-81793.herokuapp.com/",
-      "https://safe-beach-77258.herokuapp.com/",
-      "https://mysterious-cove-12751.herokuapp.com/",
-      "https://radiant-plains-59810.herokuapp.com/",
-      "https://guarded-reef-53294.herokuapp.com/",
+      
     ]
-  } if (date <= 20) {
+  } if (date <= 20 && date > 16) {
     proxies = [
       // Glen Fohdry
       "https://guarded-wave-43380.herokuapp.com/",
@@ -53,14 +48,14 @@ function proxy(): string {
       "https://whispering-oasis-41062.herokuapp.com/",
       "https://secure-depths-48114.herokuapp.com/",
     ]
-  } else if (date <= 24) {
+  } else if (date <= 24 && date > 20) {
     proxies = [
-      // James Jameson
-      "https://pure-cliffs-22620.herokuapp.com/",
-      "https://pacific-brushlands-02877.herokuapp.com/",
-      "https://frozen-coast-95713.herokuapp.com/",
-      "https://salty-everglades-46529.herokuapp.com/",
-      "https://enigmatic-springs-90651.herokuapp.com/",
+      // Rowan Creek
+      "https://immense-depths-02780.herokuapp.com/",
+      "https://infinite-depths-28550.herokuapp.com/",
+      "https://infinite-dusk-31128.herokuapp.com/",
+      "https://stormy-cliffs-99933.herokuapp.com/",
+      "https://vast-dusk-31175.herokuapp.com/",
     ]
   } else {
     proxies = [
@@ -71,12 +66,6 @@ function proxy(): string {
       "https://powerful-crag-23558.herokuapp.com/",
       "https://obscure-ocean-48137.herokuapp.com/",
 
-      // JOHNNIE WALKER
-      "https://blooming-coast-35749.herokuapp.com/",
-      "https://floating-citadel-26217.herokuapp.com/",
-      "https://warm-depths-36138.herokuapp.com/",
-      "https://still-gorge-22931.herokuapp.com/",
-      "https://desolate-sierra-66017.herokuapp.com/",
     ]
   }
 
