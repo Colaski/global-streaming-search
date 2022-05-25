@@ -50,22 +50,21 @@ function proxy(): string {
     ]
   } else if (date <= 24 && date > 20) {
     proxies = [
-      // Rowan Creek
-      "https://immense-depths-02780.herokuapp.com/",
-      "https://infinite-depths-28550.herokuapp.com/",
-      "https://infinite-dusk-31128.herokuapp.com/",
-      "https://stormy-cliffs-99933.herokuapp.com/",
-      "https://vast-dusk-31175.herokuapp.com/",
-    ]
-  } else {
-    proxies = [
       // Evan Williams
       "https://whispering-earth-79732.herokuapp.com/",
       "https://whispering-inlet-34670.herokuapp.com/",
       "https://gentle-wildwood-67571.herokuapp.com/",
       "https://powerful-crag-23558.herokuapp.com/",
       "https://obscure-ocean-48137.herokuapp.com/",
-
+    ]
+  } else {
+    proxies = [
+      // Rowan Creek
+      "https://immense-depths-02780.herokuapp.com/",
+      "https://infinite-depths-28550.herokuapp.com/",
+      "https://infinite-dusk-31128.herokuapp.com/",
+      "https://stormy-cliffs-99933.herokuapp.com/",
+      "https://vast-dusk-31175.herokuapp.com/",
     ]
   }
 
