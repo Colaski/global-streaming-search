@@ -9,12 +9,12 @@ function proxy(): string {
 
   if (date <= 4) {
     proxies = [
-      // Colaski OG
-      "https://quiet-inlet-02682.herokuapp.com/", 
-      "https://arcane-woodland-11290.herokuapp.com/", 
-      "https://infinite-reef-34828.herokuapp.com/", 
-      "https://shielded-island-83939.herokuapp.com/",
-      "https://blooming-savannah-63408.herokuapp.com/",
+      // Rowan Creek
+      "https://immense-depths-02780.herokuapp.com/",
+      "https://infinite-depths-28550.herokuapp.com/",
+      "https://infinite-dusk-31128.herokuapp.com/",
+      "https://stormy-cliffs-99933.herokuapp.com/",
+      "https://vast-dusk-31175.herokuapp.com/",
     ]
   }
   else if (date <= 8 && date > 4) {
@@ -37,7 +37,12 @@ function proxy(): string {
     ]
   } else if (date <= 16 && date > 12) {
     proxies = [
-      
+      // Colaski OG
+      "https://quiet-inlet-02682.herokuapp.com/", 
+      "https://arcane-woodland-11290.herokuapp.com/", 
+      "https://infinite-reef-34828.herokuapp.com/", 
+      "https://shielded-island-83939.herokuapp.com/",
+      "https://blooming-savannah-63408.herokuapp.com/",
     ]
   } if (date <= 20 && date > 16) {
     proxies = [
@@ -48,7 +53,7 @@ function proxy(): string {
       "https://whispering-oasis-41062.herokuapp.com/",
       "https://secure-depths-48114.herokuapp.com/",
     ]
-  } else if (date <= 24 && date > 20) {
+  } else { // if (date <= 24 && date > 20) {
     proxies = [
       // Evan Williams
       "https://whispering-earth-79732.herokuapp.com/",
@@ -57,16 +62,11 @@ function proxy(): string {
       "https://powerful-crag-23558.herokuapp.com/",
       "https://obscure-ocean-48137.herokuapp.com/",
     ]
-  } else {
-    proxies = [
-      // Rowan Creek
-      "https://immense-depths-02780.herokuapp.com/",
-      "https://infinite-depths-28550.herokuapp.com/",
-      "https://infinite-dusk-31128.herokuapp.com/",
-      "https://stormy-cliffs-99933.herokuapp.com/",
-      "https://vast-dusk-31175.herokuapp.com/",
-    ]
-  }
+  } // else {
+//     proxies = [
+      
+//     ]
+//   }
 
   let randomIndex = Math.floor(Math.random() * proxies.length)
   return proxies[randomIndex]
