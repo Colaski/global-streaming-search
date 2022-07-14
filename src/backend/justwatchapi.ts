@@ -44,7 +44,7 @@ function proxy(): string {
       "https://shielded-island-83939.herokuapp.com/",
       "https://blooming-savannah-63408.herokuapp.com/",
     ]
-  } if (date <= 20 && date > 16) {
+  } else if (date <= 20 && date > 16) {
     proxies = [
       // Glen Fohdry
       "https://guarded-wave-43380.herokuapp.com/",
