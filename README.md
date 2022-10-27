@@ -20,11 +20,23 @@ open `localhost:8000` in your browser.
 
 ## Running In Docker/Server
 
-Unfortunately, I do not have the time or will power to create a docker image with an instruction writeup to make self-hosting easy. For this to work outside of your localhost you would need to set up a [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) proxy somewhere, get all the ports to play nicely, and modify the souce of this app to send the API requests through your proxy. You can set up the cors proxy on the same machine, another docker image, or probably on the same docker image.
+A dockerfile is provided for running within your localhost.
 
-Some places to start would be [this cors proxy](https://github.com/Rob--W/cors-anywhere) and my [implementation for the github site](https://github.com/Colaski/global-streaming-search/blob/github-pages/src/backend/justwatchapi.ts). Note: my implementation is designed to mitigate rate limiting by the proxy's hosting provider, rate limiting wouldn't be a problem if you are self-hosting the proxy.
+```sh
+git clone https://github.com/Colaski/global-streaming-search.git
+cd global-streaming-search
+docker build . -t "streaming-search"
+docker run -p 8000:8000 streaming-search 
+```
 
-If anyone wants to try this on their own and do a pull request with easy to follow instructions I'd be happy to merge it.
+Open `localhost:8000` in your browser.
+
+
+Note: The first 8000 in `docker run -p 8000:8000 streaming-search` can be replaced with whatever port you would like to use to access the site on your localhost for example, `docker run -p 80:8000 streaming-search` would put the site on http://localhost:80 (which can be shortened to just http://localhost since browsers assume 80)
+
+**However** if you wish to self-host the site beyond localhost, proxying is needed due to [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). You would need to set up a  proxy somewhere, and get all the ports to play nicely.
+
+Unfortunately, I do not have the time to create a docker image with an instruction writeup to make self-hosting easy. If anyone wants to try this on their own and do a pull request with easy to follow instructions I'd be happy to merge it.
 
 ## FAQ
 
@@ -34,4 +46,4 @@ The website is generated in your browser, so there isn't a powerful server rende
 
 ### Why are the results blank?
 
-The website is generated in your browser, so accessing the JustWatch API must be done through a proxy because of [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). Since I'm using free instances to run the proxy, I sometimes run out of free hours for the proxy. At this point problems should be very rare, but if there is one please open an issue on this repo. 
+The website is generated in your browser, so accessing the JustWatch API must be done through a proxy because of [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). Since I'm using free instances to run the proxy, I sometimes run out of free hours for the proxy. At this point problems should be very rare, but if there is one please open an issue on this repo.
