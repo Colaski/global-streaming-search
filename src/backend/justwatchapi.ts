@@ -46,21 +46,22 @@ function proxy(): string {
     ]
   } else if (date <= 20 && date > 16) {
     proxies = [
-      // Evan Williams
-      "https://whispering-earth-79732.herokuapp.com/",
-      "https://whispering-inlet-34670.herokuapp.com/",
-      "https://gentle-wildwood-67571.herokuapp.com/",
-      "https://powerful-crag-23558.herokuapp.com/",
-      "https://obscure-ocean-48137.herokuapp.com/",
-    ]
-  } else { // if (date <= 24 && date > 20) {
-    proxies = [
       // Glen Fohdry
       "https://guarded-wave-43380.herokuapp.com/",
       "https://fathomless-headland-13472.herokuapp.com/",
       "https://protected-escarpment-40664.herokuapp.com/",
       "https://whispering-oasis-41062.herokuapp.com/",
       "https://secure-depths-48114.herokuapp.com/",
+
+    ]
+  } else { // if (date <= 24 && date > 20) {
+    proxies = [
+      // Evan Williams
+      "https://whispering-earth-79732.herokuapp.com/",
+      "https://whispering-inlet-34670.herokuapp.com/",
+      "https://gentle-wildwood-67571.herokuapp.com/",
+      "https://powerful-crag-23558.herokuapp.com/",
+      "https://obscure-ocean-48137.herokuapp.com/",
     ]
   } // else {
 //     proxies = [
@@ -73,7 +74,6 @@ function proxy(): string {
 }
 
 export async function search_for_item(query: string, country: string): Promise<any> {
-  console.log(proxy())
     const url = `${proxy()}https://apis.justwatch.com/content/titles/${country}/popular`
 
     const body = {
