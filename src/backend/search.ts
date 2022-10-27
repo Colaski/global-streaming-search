@@ -16,6 +16,7 @@ export class TVOrMovie extends IDSearch {
     this.offers = offers
   }
 }
+
 class CountryOffers {
   country: string
   offers: [Offer]
@@ -32,6 +33,7 @@ class Offer {
   monetization_types: [string]
   url: string
 }
+
 export async function get_all_info_from_id(search: IDSearch, providers: [Provider]): Promise<TVOrMovie> {
   const locales = await get_all_locales()
 
@@ -48,7 +50,7 @@ export async function get_all_info_from_id(search: IDSearch, providers: [Provide
   home = home[0].info
   let short_description = home["short_description"]
 
-  let seasons = ("seasons" in home) ? home["seasons"] : "NULL"
+  let number_seasons = ("seasons" in home) ? home["seasons"].length.toString() : "NULL"
 
   let offers: any = []
   var append_offers = country_info.map(async (i: any) => {
@@ -67,7 +69,8 @@ export async function get_all_info_from_id(search: IDSearch, providers: [Provide
                 clear_name: provider.clear_name,
                 icon_uri: provider.icon_uri,
                 monetization_types: provider.monetization_types,
-                url: i["urls"]["standard_web"]
+                url: i["urls"]["standard_web"],
+                seasons: i["element_count"]
               })
             }
           })
@@ -81,7 +84,7 @@ export async function get_all_info_from_id(search: IDSearch, providers: [Provide
     }
   })
   await Promise.all(append_offers)
-  return new TVOrMovie(search, short_description, seasons, offers)
+  return new TVOrMovie(search, short_description, number_seasons, offers)
 }
 
 export class Provider {
@@ -90,13 +93,15 @@ export class Provider {
   clear_name: string
   icon_uri: string
   monetization_types: [string]
+  seasons: number
 
-  constructor(id: number, short_name: string, clear_name: string, icon_uri: string, monetization_types: [string]) {
+  constructor(id: number, short_name: string, clear_name: string, icon_uri: string, monetization_types: [string], seasons: number) {
     this.id = id
     this.short_name = short_name
     this.clear_name = clear_name
     this.icon_uri = icon_uri
     this.monetization_types = monetization_types
+    this.seasons = seasons
   }
 }
 export async function distilled_providers(): Promise<[Provider]> {
@@ -120,7 +125,8 @@ export async function distilled_providers(): Promise<[Provider]> {
             i["short_name"],
             i["clear_name"],
             icon_uri,
-            monetization_types
+            monetization_types,
+            undefined
           ))
       }
     })

@@ -32,7 +32,7 @@
   <Loading/>
 {:then titles}
   <Header/>
-  <div class="selection" style="--backdrop-url: url({titles.backdrop_url});">
+  <div class="selection">
     <div style="height: 15rem;" />
     <div class="box">
       <div style="display: flex; align-items: left">
@@ -52,6 +52,9 @@
                   <span style="text-align: center; display: inline-block;">
                     <a href="{offer["url"]}"><img src="{offer["icon_uri"]}" alt="Icon for {offer.clear_name}" id="{offer.short_name}"></a>
                   <label for="{offer.short_name}">{offer.clear_name}</label>
+                  {#if offer.seasons != undefined}
+                    <label for="{offer.short_name}">{offer.seasons} / {titles["number_seasons"]} Seasons</label>
+                  {/if}
                   </span>
                 </div>
               {/each}
@@ -94,7 +97,6 @@
   }
   .selection {
     margin-top: -1.5rem;
-    background-image: var(--backdrop-url);
     background-size: cover;
     height: 30rem;
     margin-left: -1rem;
