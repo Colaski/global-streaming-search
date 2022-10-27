@@ -7,14 +7,12 @@ export async function search(query: string, locale: Locale): Promise<any> {
 export class TVOrMovie extends IDSearch {
   short_description: string
   number_seasons: string
-  backdrop_url: string
   offers: [CountryOffers]
 
-  constructor(is: IDSearch, short_description: string, number_seasons: string, backdrop_url: string, offers: [CountryOffers]) {
+  constructor(is: IDSearch, short_description: string, number_seasons: string, offers: [CountryOffers]) {
     super(is.title, is.id, is.poster_uri, is.type, is.release_year, is.query_locale)
     this.short_description = short_description
     this.number_seasons = number_seasons
-    this.backdrop_url = backdrop_url
     this.offers = offers
   }
 }
@@ -50,11 +48,6 @@ export async function get_all_info_from_id(search: IDSearch, providers: [Provide
   home = home[0].info
   let short_description = home["short_description"]
 
-  // Gets the backdrop url.
-  let regex = new RegExp("\\s*([0-9]+)")
-  let regex_match: any = regex.exec(home["backdrops"][0]["backdrop_url"])
-  let backdrop_url = (regex_match != null) ? `https://images.justwatch.com/backdrop/${regex_match[0]}/s1920/backdrop.webp` : "NULL"
-
   let seasons = ("seasons" in home) ? home["seasons"] : "NULL"
 
   let offers: any = []
@@ -88,7 +81,7 @@ export async function get_all_info_from_id(search: IDSearch, providers: [Provide
     }
   })
   await Promise.all(append_offers)
-  return new TVOrMovie(search, short_description, seasons, backdrop_url, offers)
+  return new TVOrMovie(search, short_description, seasons, offers)
 }
 
 export class Provider {

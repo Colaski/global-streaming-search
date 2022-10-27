@@ -1,4 +1,7 @@
 // Search for an Item (either a show or movie title) in a locale/country (ex. "en_US" for USA)
+
+import { all_locales, all_providers } from "./data"
+
 export async function search_for_item(query: string, country: string): Promise<any> {
     const url = `https://apis.justwatch.com/content/titles/${country}/popular`
 
@@ -19,12 +22,14 @@ export async function search_for_item(query: string, country: string): Promise<a
 
 // Returns raw JSON information on every locale supported by JustWatch
 async function get_locales(): Promise<any> {
-    const url = "https://apis.justwatch.com/content/locales/state"
-    const response = await fetch(url, {
-      headers: {"X-Requested-With": "fetch"}
-    })
-    if (response.ok == false) throw new Error("Http Error: " + response.status)
-    return await response.json()
+    // const url = "https://apis.justwatch.com/content/locales/state"
+    // const response = await fetch(url, {
+    //   headers: {"X-Requested-With": "fetch"}
+    // })
+    // if (response.ok == false) throw new Error("Http Error: " + response.status)
+    // return await response.json()
+
+    return all_locales
 }
 
 export class Locale {
@@ -61,20 +66,21 @@ async function get_providers(country: string): Promise<any> {
     return response.json()
 }
 
-// Returns the JSON data on every single provider JustWath has data on for every country
+// Returns the JSON data on every single provider JustWatch has data on for every country
 export async function get_all_providers(): Promise<any> {
-    const locale_list = await get_all_locales()
-    var providers_array: any = []
-    var promise = locale_list.map(async locale => {
-        var r = await get_providers(locale.full_locale)
-        var provider = {
-            country: locale.country,
-            providers: r
-        }
-        providers_array.push(provider)
-    })
-    await Promise.all(promise)
-    return providers_array
+    // const locale_list = await get_all_locales()
+    // var providers_array: any = []
+    // var promise = locale_list.map(async locale => {
+    //     var r = await get_providers(locale.full_locale)
+    //     var provider = {
+    //         country: locale.country,
+    //         providers: r
+    //     }
+    //     providers_array.push(provider)
+    // })
+    // await Promise.all(promise)
+    // return providers_array
+    return all_providers
 }
 
 /*
