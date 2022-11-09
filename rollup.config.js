@@ -55,7 +55,7 @@ export default {
 		replace({
 			preventAssignment: true,
 			values: {
-				'process.env.API_PROXY': `"${process.env.API_PROXY}"` ?? 'undefined',
+				'process.env.API_PROXY': process.env.API_PROXY ? `"${process.env.API_PROXY}"` : undefined,
 			}
 		}),
 
