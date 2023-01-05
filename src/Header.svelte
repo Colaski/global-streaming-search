@@ -1,5 +1,5 @@
 <div>
-  <a href="https://colaski.github.io/global-streaming-search/"><h1>Global Streaming Search</h1></a>
+  <a href="/"><h1>Global Streaming Search</h1></a>
 </div>
 
 <style>
