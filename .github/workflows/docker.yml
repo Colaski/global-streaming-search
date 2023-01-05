@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1' # every monday at midnight
+jobs:
+  release-docker:
+    name: build ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo "${DOCKERHUB_PASS}" | docker login --username "${DOCKERHUB_USER}" --password-stdin
+          docker build --tag "${DOCKERHUB_USER}/global-streaming-search:latest" .
+          docker push "${DOCKERHUB_USER}/global-streaming-search:latest"
+        env:
+          DOCKERHUB_USER: ${{ secrets.DOCKERHUB_USER }}
+          DOCKERHUB_PASS: ${{ secrets.DOCKERHUB_PASS }}
