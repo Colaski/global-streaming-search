@@ -5,7 +5,7 @@
 <main>
   <a href="https://github.com/Colaski/global-streaming-search"
     ><img
-      src="https://colaski.github.io/global-streaming-search/images/github.png"
+      src="/images/github.png"
       alt="github logo"
     /></a
   >

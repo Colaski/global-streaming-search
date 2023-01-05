@@ -90,7 +90,7 @@
     margin-top: calc(100vh / 6);
   }
   .background {
-    background-image: url("https://colaski.github.io/global-streaming-search/images/movie-poster-collection.webp");
+    background-image: url("/images/movie-poster-collection.webp");
     filter: blur(0.5rem);
     height: 100vh;
     margin-top: -3rem;

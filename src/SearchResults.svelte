@@ -47,7 +47,7 @@
                 />
               {:else}
                 <img
-                src="./images/noImage.webp"
+                src="/images/noImage.webp"
                 alt="No image found for the {result['type']} {result['title']}"
                 />
               {/if}
