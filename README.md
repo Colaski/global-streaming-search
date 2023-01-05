@@ -18,7 +18,7 @@ open `localhost:8000` in your browser.
 ## Find it on Docker Hub All Ready to Go!
 
 ```bash
-docker run -p 8000:8000 streaming-search
+docker run -p 8000:8000 colaski/global-streaming-search
 ```
 
 [https://hub.docker.com/r/colaski/global-streaming-search](https://hub.docker.com/r/colaski/global-streaming-search)
