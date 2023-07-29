@@ -44,6 +44,7 @@
                 bind:value={query}
                 placeholder="🔎 Title"
                 style="width: 40vw; height: 2.5rem;"
+                autofocus
               />
               <input type="submit" class="search" value="Search" />
             </div>
