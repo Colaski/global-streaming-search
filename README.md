@@ -1,3 +1,5 @@
+**Archive Notice**: Don't have the time to properly maintain this as an OSS project and it probably should be re-written. Originally wrote this thing in about a week and never expected it to have as much interested as it did, thank you! Feel free to fork the project or and/or reach out about taking it over so I can point to it in this README.
+
 # Global Streaming Search
 
 Powered by the unofficial [JustWatch API](https://www.justwatch.com) using [JustWatch API TypeScript](https://github.com/Colaski/JustWatchAPITypeScript).
